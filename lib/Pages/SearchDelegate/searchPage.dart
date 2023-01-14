@@ -7,12 +7,20 @@ class MySearchDelegate extends SearchDelegate{
 
 List<String> list =["rashed","aziz", "pia", "jamal", "shiraj", "fahad","fuad"];
 
+
+@override
+  ThemeData appBarTheme(BuildContext context) {
+    // TODO: implement appBarTheme
+    return ThemeData();
+  }
+
+
   @override
   List<Widget>? buildActions(BuildContext context) {
     // TODO: implement buildActions
     return [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
         onPressed: () {
           query = '';
         },
