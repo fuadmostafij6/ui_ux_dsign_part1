@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Pages/Homepage/homePageScreen.dart';
+import 'Pages/bottomNavPage/bottomNav.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home: HomePage(),
+      home: BottomNavPage(),
     );
   }
 }

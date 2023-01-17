@@ -22,21 +22,24 @@ Widget buildTrendingProduct(String name, bool seeMore) {
           Container()
         ],
       ),
-      GridView.builder(
-          primary: false,
-          shrinkWrap: true,
-          itemCount: 10,
+      Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: GridView.builder(
+            primary: false,
+            shrinkWrap: true,
+            itemCount: 10,
 
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisSpacing: 2.0,
-            mainAxisSpacing: 2.0,
-            crossAxisCount: 2,
-          ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 12.0,
+              crossAxisCount: 2,
+            ),
 
 
-          itemBuilder: (context, index){
-            return buildCard();
-          })
+            itemBuilder: (context, index){
+              return buildCard();
+            }),
+      )
     ],
   );
 }
