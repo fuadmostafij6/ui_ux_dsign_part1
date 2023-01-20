@@ -3,6 +3,8 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:ui_ux_design/Pages/Homepage/homePageScreen.dart';
 import 'package:ui_ux_design/const.dart';
 
+import '../Category/Category.dart';
+
 class BottomNavPage extends StatefulWidget {
   const BottomNavPage({Key? key}) : super(key: key);
 
@@ -19,10 +21,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
       'Cart',
       style: Constance().optionStyle,
     ),
-    Text(
-      'Category',
-      style: Constance().optionStyle,
-    ),
+    CategoryPage(),
     Text(
       'Profile',
       style: Constance().optionStyle,

@@ -37,7 +37,7 @@ Widget buildTrendingProduct(String name, bool seeMore) {
 
 
             itemBuilder: (context, index){
-              return buildCard();
+              return buildCard(context);
             }),
       )
     ],
