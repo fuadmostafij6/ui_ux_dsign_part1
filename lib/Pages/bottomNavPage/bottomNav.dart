@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:ui_ux_design/Pages/Cart/Cart.dart';
 import 'package:ui_ux_design/Pages/Homepage/homePageScreen.dart';
 import 'package:ui_ux_design/const.dart';
 
@@ -17,10 +18,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
 
   final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
-    Text(
-      'Cart',
-      style: Constance().optionStyle,
-    ),
+    CartPage(),
     CategoryPage(),
     Text(
       'Profile',

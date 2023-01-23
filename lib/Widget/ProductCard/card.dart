@@ -9,7 +9,7 @@ Widget buildCard(BuildContext context) {
     InkWell(
       onTap: (){
         //Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>ProductDetailsPage()), (route) => false);
-       Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetailsPage()));
+       Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetailsPage(price: "500",name: 'product name', image: 'https://picsum.photos/200/300',id: "02",details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus laoreet lectus, sed vulputate justo tempus non. Integer pretium lectus ipsum, ac semper elit tempus id. Curabitur et ante nec libero sollicitudin lobortis. Aliquam vel rutrum tortor. Nulla sit amet justo lectus. Sed faucibus porttitor sodales. Ut non eros sit amet sem porttitor congue sit amet a tellus. Pellentesque molestie posuere ex. Fusce porttitor libero ac sapien ultricies, in facilisis ipsum mattis. Pellentesque pharetra dignissim mi, ut faucibus velit vestibulum et.",)));
       },
       child: Column(
       children: [

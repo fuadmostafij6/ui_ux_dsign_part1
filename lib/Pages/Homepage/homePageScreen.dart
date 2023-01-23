@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,10 +21,46 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   int pageIndex = 0;
+  Timer? timer;
+
+  PageController? pageController;
+
+@override
+  void initState() {
+  pageController = PageController(
+    initialPage: 0
+  );
+  timer = Timer.periodic(Duration(seconds: 5), (timer) {
+if(pageIndex<3){
+
+  pageIndex ++;
+}
+
+else{
+  pageIndex = 0;
+}
+
+
+    pageController!.animateToPage(pageIndex, duration: Duration(milliseconds: 350), curve: Curves.easeIn);
+
+  });
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    pageController!.dispose();
+    timer =null;
+    super.dispose();
+  }
+
+
 
 
   @override
   Widget build(BuildContext context) {
+
     Size size = MediaQuery.of(context).size;
     List<Widget> sliderItem = [
       Stack(
@@ -102,6 +140,7 @@ class _HomePageState extends State<HomePage> {
                 width: MediaQuery.of(context).size.width,
 
                 child: PageView(
+                  controller: pageController,
               children:sliderItem,
               onPageChanged: (index){
                 setState(() {

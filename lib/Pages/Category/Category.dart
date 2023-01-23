@@ -20,12 +20,7 @@ class _CategoryPageState extends State<CategoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:Constance().color1 ,
-      appBar: AppBar(
-        title: Text("Category"),
-        centerTitle: true,
-        backgroundColor: Constance().color1,
-        elevation: 0,
-      ),
+      appBar:Constance().newAppBar("Category"),
 
       body: SingleChildScrollView(
         child: Column(
