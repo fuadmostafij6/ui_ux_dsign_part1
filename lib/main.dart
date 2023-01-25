@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Pages/Homepage/homePageScreen.dart';
 import 'Pages/bottomNavPage/bottomNav.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,13 +15,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-
+// comments
       home: BottomNavPage(),
     );
   }
 }
-
-
-
-
-
